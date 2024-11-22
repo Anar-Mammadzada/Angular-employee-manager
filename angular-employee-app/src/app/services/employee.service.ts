@@ -29,6 +29,6 @@ export class EmployeeService {
   }
 
   public deleteEmployee(employeeId : number) : Observable<void>{
-    return this.http.get<void>(`${this.apiUrl}/delete/${employeeId}`);
+    return this.http.delete<void>(`${this.apiUrl}/delete/${employeeId}`);
   }
 }

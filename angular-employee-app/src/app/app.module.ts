@@ -4,7 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
-import { EmployeeService } from './services/employee.service';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -12,11 +12,11 @@ import { EmployeeService } from './services/employee.service';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [
-    provideHttpClient(withInterceptorsFromDi()),
-    EmployeeService
+    provideHttpClient(withInterceptorsFromDi())
   ],
   bootstrap: [AppComponent]
 })
